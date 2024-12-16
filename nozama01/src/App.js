@@ -1,15 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/pages/Home';
-import Contact from './components/pages/Contact';
+import Cart from './components/pages/Cart';
+import Product from './components/pages/Product';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route index path="/" element={<Home />}/>
-        <Route path="contact" element={<Contact />} />
+        <Route path="cart" element={<Cart />} />
+        <Route path="product/:id" element={<Product />} />
       </Routes>
     </BrowserRouter>
   );
